@@ -1,6 +1,6 @@
 FILE=$1
-if [[ $FILE != "images" && $FILE != "images2" ]]; then
-    echo "Available datasets are:images , images2"
+if [[ $FILE != "raw"  ]]; then
+    echo "Available datasets are:raw "
     exit 1
 fi
 if [[ $FILE == "cityscapes" ]]; then
@@ -9,11 +9,11 @@ if [[ $FILE == "cityscapes" ]]; then
     exit 1
 fi
 echo "Specified [$FILE]"
-URL=https://cs.stanford.edu/people/rak248/VG_100K_2/$FILE.zip
-ZIP_FILE=./data/vg/$FILE.zip
-TARGET_DIR=./data/vg/$FILE/
+URL=https://syncandshare.lrz.de/dl/fiA6KKF6AAzux7Pw2ANnBnLf/$FILE.zip
+ZIP_FILE=./data/vessel_data/$FILE.zip
+TARGET_DIR=./data/vessel_data/$FILE/
 wget -N $URL -O $ZIP_FILE
 mkdir $TARGET_DIR
-unzip $ZIP_FILE -d ./data/vg/
+unzip $ZIP_FILE -d ./data/vessel_data/
 rm $ZIP_FILE
 
