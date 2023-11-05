@@ -1,6 +1,4 @@
-
 MedPy==0.4.0
-mmcv_full==1.3.15
 timm==0.4.12
 tqdm==4.62.3
 ignite==1.1.0
